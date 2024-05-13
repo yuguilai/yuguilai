@@ -1,7 +1,7 @@
 ### Hi there 👋
 
 <!--
-**yuguilai/yuguilai** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**yuguilai/yuguilai** is a ✨ _极品私人仓库_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
 
