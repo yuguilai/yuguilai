@@ -1,0 +1,40 @@
+.query-tool {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.mode-selector {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.mode-selector button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.input-container {
+  margin-bottom: 10px;
+}
+
+.query-result {
+  font-weight: bold;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.image-container img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
