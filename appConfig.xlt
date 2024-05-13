@@ -1,0 +1,24 @@
+{
+	"appName": "QQ主题气泡预览",
+	"appPackageName": "com.yuguilai.qqtheme",
+	"appVersionName": "1.1",
+	"appVersionCode": 110000,
+	"data": {		
+		"启用顶栏": false,
+		"顶栏标题": "QQ主题气泡预览-南枝",
+		"顶栏颜色": "#00FF0088",
+		"横屏": false,
+		"显示状态栏": true,
+		"启用进度条": true,
+		"进度条颜色": "#00FF0000",
+		"支持打开外部应用": true,
+		"提示打开外部应用": true,
+		"启动页面": "NZ.html"
+	},
+	"indexPages": [
+		
+	],
+	"extraHeaders": {
+		
+	}
+}
