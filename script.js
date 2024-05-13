@@ -33,7 +33,7 @@ function handleBubbleQuery() {
   
   // 生成图片链接
   const linkA = 'https://tianquan.gtimg.cn/bubble/item/' + num + '/250x300_1.png';
-  const linkB = 'https://tianquan.gtimg.cn/theme/item/' + num + '/newPreview1.png';
+  const linkB = 'https://tianquan.gtimg.cn/bubble/item/' + num + '/newPreview1.png';
 
   // 设置图片链接
   imageA.src = linkA;
