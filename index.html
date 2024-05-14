@@ -1,47 +1,79 @@
+<!DOCTYPE html>
 <html>
- <head> 
-  <link rel="stylesheet" type="text/css" href="styles.css"> 
-  <script src="js/jq.js"></script> 
- </head> 
- <body id="v1"> 
- <div class="header">
-    <h1>QQ主题气泡预览v1.1</h1>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+    .link-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .input-container {
+      text-align: center;
+    }
+    input[type="number"] {
+      padding: 10px;
+      border-radius: 5px;
+      width: 300px; /* Adjust the width as needed */
+      font-size: 16px;
+      box-sizing: border-box; /* Ensures padding is included in the width */
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <h1>QQ主题气泡预览v1.1</h1>
+</div>
+<div class="query-tool">
+  <div class="mode-selector">
+    <a href="#" class="button" id="theme-query-btn">主题预览</a>
+    <a href="#" class="button" id="bubble-query-btn">气泡预览</a>
   </div>
- <meta id="v2" content="text/html; charset=utf-8" http-equiv="Content-Type"> 
-  <meta id="v3" name="color-scheme" content="light dark"> 
-  <meta id="v4" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"> 
-  <div id="v2" class="query-tool"> 
-   <div id="v3" class="mode-selector"> 
-    <button id="theme-query-btn">主题预览</button> 
-    <button id="bubble-query-btn">气泡预览</button> 
-   </div> 
-   <div id="v4" class="input-container"> 
-    <input type="number" id="query-input"> 
-   </div> 
-   <div id="v5" class="result-container"> 
-    <p id="query-result"></p> 
-    <div id="v6" class="image-container"> 
-     <img src="" alt="" id="image-a"> 
-     <img src="" alt="" id="image-b"> 
-    </div> 
-   </div> 
-  </div> 
-  <div class="link-container">
-    <a href="https://flowus.cn/yuguilai/share/c1fa1fc0-8e2b-418d-9f2e-ff53d04c659d">QQ个性装扮综合</a>
-  <br>
-  <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=SjtO5JmxKLu5uYW728yko3uh0P9MAZCN&authKey=Uje3kRrHBEbgELEbxLVvsybkDQ6ZhTw3OfRKc3c3JTCe1xMPL50pcr4EfersIo%2BT&noverify=0&group_code=817328967">加入交流群</a>
-  <br>
-    <a href="http://yuguilai.ysupan.com">资源下载|调用</a>
-  <br><br>
-  <center>
-  <a href="https://qm.qq.com/q/jxm1nyJk9c">添加作者</a>
-  </center>
+  <div class="input-container">
+    <input type="number" id="query-input" placeholder="请输入装扮ID..." />
   </div>
-      <br><br>
-  <center>
-  <a href="https://github.com/yuguilai/yuguilai">Github</a>
-  </center>
+  <div class="result-container">
+    <p id="query-result"></p>
+    <div class="image-container">
+      <img src="" alt="" id="image-a">
+      <img src="" alt="" id="image-b">
+    </div>
   </div>
-  <script src="script.js"></script>  
- </body>
+</div>
+<div class="link-container">
+  <a href="https://flowus.cn/yuguilai/share/c1fa1fc0-8e2b-418d-9f2e-ff53d04c659d" class="button" style="background-color: #007bff;">QQ个性装扮综合</a>
+  <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=SjtO5JmxKLu5uYW728yko3uh0P9MAZCN&authKey=Uje3kRrHBEbgELEbxLVvsybkDQ6ZhTw3OfRKc3c3JTCe1xMPL50pcr4EfersIo%2BT&noverify=0&group_code=817328967" class="button" style="background-color: #dc3545;">加入交流群</a>
+  <a href="http://yuguilai.ysupan.com" class="button" style="background-color: #ffc107;">资源下载|调用</a>
+  <a href="https://qm.qq.com/q/jxm1nyJk9c" class="button" style="background-color: #17a2b8;">添加作者</a>
+</div>
+<br><br>
+<div class="link-container">
+  <a href="https://github.com/yuguilai/yuguilai" class="button" style="background-color: #6c757d;">Github</a>
+</div>
+<script src="script.js"></script>
+</body>
 </html>
