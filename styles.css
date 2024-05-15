@@ -6,6 +6,11 @@
   border-radius: 5px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .mode-selector {
   display: flex;
   justify-content: space-between;
