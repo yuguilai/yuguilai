@@ -6,7 +6,7 @@ body {
   background-size: cover; /* 使背景图像填充整个容器，保证整张屏幕都能有背景 */
   background-repeat: no-repeat; /* 禁止背景图像重复 */
   background-attachment: fixed; /* 固定背景图像，不随滚动而滚动 */
-  backdrop-filter: blur(25px); /* 使用背景滤镜来添加模糊效果 */
+/*  backdrop-filter: blur(5px);*/ /* 使用背景滤镜来添加模糊效果 */
 }
 
 .query-tool {
