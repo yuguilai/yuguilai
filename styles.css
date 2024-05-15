@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('image/background.jpg'); /* 背景图片 */
-  background-size: 100% auto; /* 背景图像宽度自适应，高度自适应但保持其纵横比 */
+  background-size: cover; /* 背景图像宽度自适应，高度自适应但保持其纵横比 */
   background-repeat: no-repeat; /* 禁止背景图像重复 */
   background-position: center bottom; /* 背景图像在视口中居中且位于底部显示 */
   backdrop-filter: blur(5px); /* 使用背景滤镜来添加模糊效果 */
