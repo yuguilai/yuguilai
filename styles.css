@@ -12,29 +12,5 @@
   margin-bottom: 10px;
 }
 
-.mode-selector button {
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.input-container {
-  margin-bottom: 10px;
-}
-
-.query-result {
-  font-weight: bold;
-}
-
-.image-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.image-container img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-}
+/* 简化按钮样式 */
+.mode-selector
