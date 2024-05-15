@@ -13,7 +13,7 @@ bubbleQueryBtn.addEventListener('click', handleBubbleQuery);
 // 处理主题查询
 function handleThemeQuery() {
   const num = queryInput.value;
-  queryResult.innerHTML = '<a href="' + 'https://zb.vip.qq.com/mall/item-detail?appid=3&itemid=' + num + '_nav_titleclr=000000&_nav_txtclr=000000' + '">' + '链接' + '</a>'; 
+  queryResult.innerHTML = '<a href="' + 'https://zb.vip.qq.com/mall/item-detail?appid=3&itemid=' + num + '_nav_titleclr=000000&_nav_txtclr=000000' + '">' + '点击跳转到QQ装扮详情页' + '</a>'; 
   // 将生成的链接作为超链接的 href 属性;
 
   // 生成图片链接
