@@ -1,8 +1,8 @@
 {
 	"appName": "QQ主题气泡预览",
 	"appPackageName": "com.yuguilai.qqtheme",
-	"appVersionName": "1.1",
-	"appVersionCode": 110000,
+	"appVersionName": "1.26",
+	"appVersionCode": 126000,
 	"data": {		
 		"启用顶栏": false,
 		"顶栏标题": "QQ主题气泡预览-南枝",
