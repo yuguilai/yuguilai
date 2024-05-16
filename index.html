@@ -3,6 +3,27 @@
 <title>QQ主题气泡在线预览</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  <script>
+    // 背景图片链接数组
+    var backgroundImages = [
+      'http://api.cmvip.cn/API/guang.php?type=image&n=1',
+      'http://api.cmvip.cn/API/guang.php?type=image&n=2',
+      'http://api.cmvip.cn/API/guang.php?type=image&n=3'
+      // 背景图片链接
+    ];
+
+    // 在页面加载时随机选择一个背景图片链接
+    var randomIndex = Math.floor(Math.random() * backgroundImages.length);
+    var randomBackgroundImage = backgroundImages[randomIndex];
+
+    // 设置 body 元素的背景图片
+    document.body.style.backgroundImage = 'url("' + randomBackgroundImage + '")';
+  </script>
+
 @font-face {
   font-family: 'MyFont';
   src: url('font/font.ttf') format('truetype');
