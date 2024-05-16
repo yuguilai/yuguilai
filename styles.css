@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('image/background.jpg'); /* 背景图片 */
+  background-image: url('http://api.cmvip.cn/API/guang.php?type=image&n=2'); /* 背景图片 */
   background-size: cover; /* 背景图像宽度自适应，高度自适应但保持其纵横比 */
   background-repeat: no-repeat; /* 禁止背景图像重复 */
   background-position: bottom:; /* 背景图像在视口中居中且位于底部显示 */
