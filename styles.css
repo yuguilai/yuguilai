@@ -9,6 +9,15 @@ body {
   backdrop-filter: blur(5px); /* 使用背景滤镜来添加模糊效果 */
 }
 
+@font-face {
+  font-family: 'MyFont';
+  src: url('font/font.ttf') format('truetype');
+}
+
+body {
+  font-family: 'MyFont', Arial, sans-serif;
+}
+
 .query-tool {
   width: 300px;
   margin: 0 auto;
