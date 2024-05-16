@@ -1,5 +1,8 @@
 body {
   font-family: Arial, sans-serif;
+ @font-face {
+  font-family: 'MyFont';
+  src: url('font/font.ttf') format('truetype');
   margin: 0;
   padding: 0;
   background-image: url('image/background.jpg'); /* 背景图片 */
@@ -7,16 +10,6 @@ body {
   background-repeat: no-repeat; /* 禁止背景图像重复 */
   background-position: bottom:; /* 背景图像在视口中居中且位于底部显示 */
   backdrop-filter: blur(5px); /* 使用背景滤镜来添加模糊效果 */
-}
-body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      margin: 0;
-      padding: 0;
-    }
- @font-face {
-  font-family: 'MyFont';
-  src: url('font/font.ttf') format('truetype');
 }
 
 .query-tool {
