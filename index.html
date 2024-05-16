@@ -8,22 +8,6 @@ body {
   margin: 0;
   padding: 0;
 }
-  <script>
-    // 背景图片链接数组
-    var backgroundImages = [
-      'http://api.cmvip.cn/API/guang.php?type=image&n=1',
-      'http://api.cmvip.cn/API/guang.php?type=image&n=2',
-      'http://api.cmvip.cn/API/guang.php?type=image&n=3'
-      // 背景图片链接
-    ];
-
-    // 在页面加载时随机选择一个背景图片链接
-    var randomIndex = Math.floor(Math.random() * backgroundImages.length);
-    var randomBackgroundImage = backgroundImages[randomIndex];
-
-    // 设置 body 元素的背景图片
-    document.body.style.backgroundImage = 'url("' + randomBackgroundImage + '")';
-  </script>
 
 @font-face {
   font-family: 'MyFont';
@@ -67,6 +51,17 @@ body {
       box-sizing: border-box; /* Ensures padding is included in the width */
     }
   </style>
+<script>
+    // 生成一个介于1到15之间的随机整数作为背景图片编号
+    var randomBackground = Math.floor(Math.random() * 15) + 1;
+
+    // 创建一个<style>标签，并设置其内容为动态生成的 CSS
+    var styleTag = document.createElement('style');
+    styleTag.textContent = 'body { background-image: url("http://api.cmvip.cn/API/guang.php?type=image&n=' + randomBackground + '"); background-size: cover; background-repeat: no-repeat; background-position: bottom; backdrop-filter: blur(5px); }';
+
+    // 将<style>标签插入到<head>中
+    document.head.appendChild(styleTag);
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body style="width: auto; height: auto;">
