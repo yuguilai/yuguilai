@@ -11,10 +11,6 @@ body {
   min-height: 100vh; /* 确保页面内容至少占满整个屏幕的高度 */
 }
 
-html, body {
-  height: 100%; /* 确保html和body元素占满整个视口高度 */
-}
-
 .query-tool {
   width: 300px;
   margin: 0 auto;
