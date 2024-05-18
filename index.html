@@ -1,93 +1,102 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>QQ主题气泡在线预览</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-@font-face {
-  font-family: 'MyFont';
-  src: url('font/font.ttf') format('truetype');
-}
-
-body {
-  font-family: 'MyFont', Arial, sans-serif;
-}
-
-    .header {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 2px;
-    }
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: #fff;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 50px;
-      transition: background-color 0.3s;
-    }
-    .button:hover {
-      background-color: #45a049;
-    }
-    .link-container {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .input-container {
-      text-align: center;
-    }
-    input[type="number"] {
-      padding: 10px;
-      border-radius: 150px;
-      width: calc(100% - 40px); /* Adjust the width as needed */
-      font-size: 16px;
-      box-sizing: border-box; /* Ensures padding is included in the width */
-    }
-  </style>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QQ主题气泡在线预览</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        @font-face {
+            font-family: 'MyFont';
+            src: url('font/font.ttf') format('truetype');
+        }
+        body {
+            font-family: 'MyFont', Arial, sans-serif;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2px;
+        }
+       
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+        }
+      
+      .button:hover {
+            background-color: #45a049;
+        }
+        
+        .link-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .input-container {
+            text-align: center;
+        }
+        input[type="number"] {
+            padding: 10px;
+            border-radius: 150px;
+            width: calc(100% - 40px); /* Adjust the width as needed */
+            font-size: 16px;
+            box-sizing: border-box; /* Ensures padding is included in the width */
+        }
+    </style>
+    <script src="js/jq.js"></script>
 </head>
-<body style="width: auto; height: auto;">
-<div class="header">
-  <h1>QQ主题气泡预览v1.26</h1>
-</div>
-<div class="query-tool">
-  <div class="mode-selector">
-    <a href="#" class="button" id="theme-query-btn">主题预览</a>
-    <a href="#" class="button" id="bubble-query-btn">气泡预览</a>
-  </div>
-  <div class="input-container">
-    <input type="number" id="query-input" placeholder="请输入装扮ID..." />
-  </div>
-  <div class="result-container">
-    <p id="query-result"></p>
-    <div class="image-container">
-      <img src="" alt="" id="image-a">
-      <img src="" alt="" id="image-b">
+<body>
+    <div class="header">
+        <h1>QQ主题气泡预览v1.27</h1>
     </div>
-  </div>
-</div>
-<div class="link-container">
-  <div>
-  <a href="https://flowus.cn/yuguilai/share/c1fa1fc0-8e2b-418d-9f2e-ff53d04c659d" class="button" style="background-color: #007bff;">QQ个性装扮综合</a>
-  <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=SjtO5JmxKLu5uYW728yko3uh0P9MAZCN&authKey=Uje3kRrHBEbgELEbxLVvsybkDQ6ZhTw3OfRKc3c3JTCe1xMPL50pcr4EfersIo%2BT&noverify=0&group_code=817328967" class="button" style="background-color: #dc3545;">加入交流群</a>
- </div>
-  <br>
-  <a href="http://yuguilai.ysupan.com" class="button" style="background-color: #ffc107;">资源下载|调用</a>
-  <a href="https://qm.qq.com/q/jxm1nyJk9c" class="button" style="background-color: #17a2b8;">添加作者</a>
-</div>
-<br><br>
-<div class="link-container">
-  <a href="https://github.com/yuguilai/yuguilai" class="button" style="background-color: #300F38;">Github</a>
-  <a href="https://t.me/qqgxzb" class="button" style="background-color: #0050C6;">Telegram</a> 
-</div>
-<script src="script.js"></script>
+    <div class="query-tool">
+        <div class="mode-selector">
+            <a href="#" class="button">主题预览</a>
+            <a href="#" class="button">气泡预览</a>
+        </div>
+        <div class="input-container">
+            <input type="number" placeholder="请输入装扮ID...">
+        </div>
+        <div class="result-container">
+            <p class="query-result"></p>
+            <div class="image-container">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="link-container">
+       <div>
+        <a href="https://flowus.cn/yuguilai/share/c1fa1fc0-8e2b-418d-9f2e-ff53d04c659d" class="button" style="background-color: #007bff;">QQ个性装扮综合</a>
+        <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&amp;k=SjtO5JmxKLu5uYW728yko3uh0P9MAZCN&amp;authKey=Uje3kRrHBEbgELEbxLVvsybkDQ6ZhTw3OfRKc3c3JTCe1xMPL50pcr4EfersIo%2BT&amp;noverify=0&amp;group_code=817328967" class="button" style="background-color: #dc3545;">加入交流群</a>
+        </div><br>
+        <a href="http://yuguilai.ysupan.com" class="button" style="background-color: #ffc107;">资源下载|调用</a>
+        <a href="https://qm.qq.com/q/jxm1nyJk9c" class="button" style="background-color: #17a2b8;">添加作者</a>
+    </div>
+    <br>
+    <br>
+    <div class="link-container">
+        <a href="https://github.com/yuguilai/yuguilai" class="button" style="background-color: #550088;">Github</a>
+        <a href="https://t.me/qqgxzb" class="button" style="background-color: #0050C6;">Telegram</a>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.body.style.backgroundImage = 'url(http://api.cmvip.cn/API/guang.php?type=image&n=' + Math.floor(Math.random() * 15 + 1) + ')';
+    </script>
 </body>
 </html>
