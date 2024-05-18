@@ -1,14 +1,19 @@
 body {
   font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
-  background-image: url('https://api.lolimi.cn/API/dmtx/pc.php'); /* 背景图片 */
-  background-size: cover; /* 背景图像宽度自适应，高度自适应但保持其纵横比 */
+  background-image: url('http://api.cmvip.cn/API/guang.php?type=image&n=2'); /* 背景图片路径 */
+  background-size: cover; /* 使背景图像填充整个容器，保证整张屏幕都能有背景 */
   background-repeat: no-repeat; /* 禁止背景图像重复 */
-  background-position: bottom:; /* 背景图像在视口中居中且位于底部显示 */
+  background-position: center; /* 背景图像在视口中居中显示 */
   backdrop-filter: blur(5px); /* 使用背景滤镜来添加模糊效果 */
+  min-height: 100vh; /* 确保页面内容至少占满整个屏幕的高度 */
 }
 
+html, body {
+  height: 100%; /* 确保html和body元素占满整个视口高度 */
+}
 
 .query-tool {
   width: 300px;
@@ -31,3 +36,4 @@ img {
 
 /* 简化按钮样式 */
 .mode-selector
+}
