@@ -35,10 +35,15 @@
             text-align: center;
             text-decoration: none;
             border-radius: 50px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.1s;
         }
         .button:hover {
             background-color: #45a049;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+        .button:active {
+            transform: scale(0.95);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 1);
         }
         .link-container {
             text-align: center;
