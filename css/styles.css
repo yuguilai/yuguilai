@@ -3,7 +3,7 @@ body {
   background-color: #f0f0f0;
   margin: 0;
   padding: 0;
-  background-image: url('http://api.cmvip.cn/API/guang.php?type=image&n=2'); /* 背景图片路径 */
+  background-image: url('image/background.jpg'); /* 背景图片路径 */
   background-size: cover; /* 使背景图像填充整个容器，保证整张屏幕都能有背景 */
   background-repeat: no-repeat; /* 禁止背景图像重复 */
   background-position: center; /* 背景图像在视口中居中显示 */
