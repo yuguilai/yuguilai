@@ -17,8 +17,7 @@ function handleThemeQuery() {
   // 将生成的链接作为超链接的 href 属性;
 
   // 生成图片链接
-  const linkA = 'https://tianquan.gtimg.cn/theme/item/' + num + '/a.jpg';
-  const linkB = 'https://tianquan.gtimg.cn/theme/item/' + num + '/newPreview1.png';
+  const linkA = 'https://tianquan.gtimg.cn/theme/item/' + num + '/newPreview2.jpg';
 
   // 设置图片链接
   imageA.src = linkA;
