@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>下“雪”了</title>
+    <title>张艺恒午福（牛逼不会写）</title>
   </head>
   <body>
     <script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.163.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.163.0/examples/jsm/"}}</script><script type="module">import*as THREE from'three';import{OrbitControls}from'three/addons/controls/OrbitControls.js';import*as TWEEN from'three/addons/libs/tween.module.js';import{SimplexNoise}from'three/addons/math/SimplexNoise.js';let simplex=new SimplexNoise();class TextTerrain extends THREE.Object3D{constructor(anisotropy){super();let alphabet=[...'王浩宇王浩宇王浩宇',];let textTexture=(()=>{let c=document.createElement('canvas');let ctx=c.getContext('2d');let texSize=2048;c.width=texSize;c.height=texSize;ctx.clearRect(0,0,texSize,texSize);let dim=8;let dimStep=texSize/dim;for(let i=0;i<alphabet.length;i++){let tileX=i%8;let tileY=Math.floor(i/8);let x=(tileX+0.5)*dimStep;let y=texSize-(tileY+0.5)*dimStep;ctx.fillStyle=`rgba(0,0,0,1)`;ctx.textAlign='center';ctx.textBaseline='middle';ctx.font=`bold ${dimStep*0.9}px Arial`;ctx.fillText(alphabet[i],x,y)}let tex=new THREE.CanvasTexture(c);tex.colorSpace='srgb';tex.anisotropy=anisotropy;return tex})();let tileDim=200;let g=new THREE.PlaneGeometry();g.setAttribute('letterIdx',new THREE.InstancedBufferAttribute(new Float32Array(Array.from({length:tileDim*tileDim,},()=>{return THREE.MathUtils.randInt(0,alphabet.length-1)})),1));let m=new THREE.MeshBasicMaterial({map:textTexture,transparent:true,alphaTest:0.01,side:THREE.DoubleSide,onBeforeCompile:(shader)=>{shader.vertexShader = `
