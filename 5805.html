@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>限时优惠活动 - 升卿卡</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            padding: 20px;
+        }
+        
+        .poster {
+            width: 100%;
+            max-width: 800px;
+            background: linear-gradient(145deg, #fff9f0 0%, #ffffff 100%);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            position: relative;
+            border: 8px solid #fff;
+        }
+        
+        .header {
+            background: linear-gradient(90deg, #ff6b35 0%, #ff9e58 100%);
+            padding: 30px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+        }
+        
+        .title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: white;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            letter-spacing: 2px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .ribbon {
+            position: absolute;
+            top: 20px;
+            right: -40px;
+            background: #ffcc00;
+            color: #8a6700;
+            font-weight: bold;
+            padding: 10px 40px;
+            transform: rotate(45deg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            font-size: 1rem;
+            z-index: 10;
+        }
+        
+        .content {
+            padding: 30px 40px;
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px dashed #ff9e58;
+            color: #ff6b35;
+        }
+        
+        .section-title i {
+            margin-right: 12px;
+            font-size: 1.8rem;
+        }
+        
+        .section-title h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .activities {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        @media (min-width: 768px) {
+            .activities {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .activity {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.15);
+            border-top: 5px solid #ff9e58;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .activity:hover {
+            transform: translateY(-5px);
+        }
+        
+        .activity:nth-child(2) {
+            border-top-color: #ffcc00;
+        }
+        
+        .activity-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .activity-num {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #ff6b35;
+            margin-right: 15px;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .activity:nth-child(2) .activity-num {
+            color: #e6a600;
+            background: rgba(255, 204, 0, 0.1);
+        }
+        
+        .activity-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .activity-content {
+            padding: 0 10px;
+        }
+        
+        .activity-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, rgba(255,240,200,0.5) 0%, rgba(255,240,200,0) 100%);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: 600;
+            color: #e65100;
+        }
+        
+        .conditions {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            border-left: 4px solid #ff9e58;
+        }
+        
+        .conditions h3 {
+            color: #ff6b35;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .conditions ul {
+            padding-left: 20px;
+        }
+        
+        .conditions li {
+            margin-bottom: 10px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .contact {
+            background: linear-gradient(90deg, #4a6572 0%, #344955 100%);
+            padding: 30px 40px;
+            text-align: center;
+            color: white;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .contact-title {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+            color: #ffcc00;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 25px;
+            border-radius: 10px;
+            min-width: 250px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        
+        .contact-item i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ffcc00;
+        }
+        
+        .contact-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        
+        .contact-item p {
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #222;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .milk-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            color: rgba(255, 107, 53, 0.2);
+        }
+        
+        .gift-icon {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 3rem;
+            color: rgba(255, 204, 0, 0.2);
+        }
+        
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ff3333;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="ribbon">限时优惠</div>
+        <div class="header">
+            <h1 class="title">限时优惠活动！</h1>
+            <p class="subtitle">升卿卡双重好礼等你来拿</p>
+        </div>
+        
+        <div class="content">
+            <div class="section-title">
+                <i class="fas fa-gift"></i>
+                <h2>活动内容</h2>
+            </div>
+            
+            <div class="activities">
+                <div class="activity">
+                    <div class="badge">仅限10人</div>
+                    <i class="fas fa-wine-bottle milk-icon"></i>
+                    <div class="activity-title">
+                        <div class="activity-num">01</div>
+                        <div class="activity-name">首十入升卿，鲜礼相呈</div>
+                    </div>
+                    <div class="activity-content">
+                        <p>前十名申领升卿卡并<span class="highlight">激活使用两个月后</span>，可凭订单记录咨询客服领取<span class="highlight">一箱伊利纯牛奶（240ml*16袋）</span>。</p>
+                        
+                        <div class="conditions">
+                            <h3>活动1 - 参与条件</h3>
+                            <ul>
+                                <li>限制人数：<span class="highlight">10人</span></li>
+                                <li>号卡激活后即可联系客服，提供姓氏、手机号、申领的手机号与收货地址</li>
+                                <li>奖品将在<span class="highlight">次月15号</span>发出，亦可选择<span class="highlight">折现25元</span>，折现在次月25号发出</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity">
+                    <div class="badge">限50次</div>
+                    <i class="fas fa-gift gift-icon"></i>
+                    <div class="activity-title">
+                        <div class="activity-num">02</div>
+                        <div class="activity-name">推卡得红包，双月惊喜</div>
+                    </div>
+                    <div class="activity-content">
+                        <p>将公众号内的卡推荐给朋友，促成订单并激活后，可获得<span class="highlight">5-10元红包</span>。</p>
+                        <p>激活的号卡使用一个月后，可再次获得<span class="highlight">10-15元红包</span>。</p>
+                        
+                        <div class="conditions">
+                            <h3>活动2 - 参与条件</h3>
+                            <ul>
+                                <li>限制参与次数：<span class="highlight">50次</span></li>
+                                <li>每人可多次参与，需提供申卡人的手机号、申卡时间</li>
+                                <li>若申卡人已领取过活动一的礼品，则只获得<span class="highlight">10元红包</span>，否则按上方活动结算，具体金额以客服介绍为主</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact">
+            <h3 class="contact-title">立即参与活动</h3>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fab fa-weixin"></i>
+                    <h4>客服微信</h4>
+                    <p>yuguilai2025</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-qrcode"></i>
+                    <h4>公众号</h4>
+                    <p>亿点好卡</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>活动最终解释权归公众号所有</p>
+        </div>
+    </div>
+</body>
+</html>
