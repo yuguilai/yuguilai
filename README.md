@@ -1,44 +1,85 @@
+<div align="center">
+
 # QQ个性装扮综合
 
-> **项目简介**  
-> `yuguilai` 团队于 **2024 年 2 月** 启动的项目（现已停更并关闭阅读权限），主要用于体验 QQ 个性装扮商城中的付费及各类门槛装扮，涵盖：  
-> - 💠 QQ 主题  
-> - 💬 气泡  
-> - 🔤 字体  
-> - 🖼️ 挂件  
-> - 📇 名片等  
->  
-> 主要针对 **安卓 QQ9** 进行研究，部分思路可类比适用于已越狱的 iPhone。
+<img src="https://img.shields.io/badge/Version-v2.0-8A2BE2?style=for-the-badge">
+<img src="https://img.shields.io/badge/Status-Archived-ff9800?style=for-the-badge">
+<img src="https://img.shields.io/badge/Platform-Android%20QQ9-00C853?style=for-the-badge">
+<img src="https://img.shields.io/badge/Maintenance-Stopped-red?style=for-the-badge">
+
+<br>
+
+一个关于 QQ 个性装扮研究与在线预览的项目
+
+支持：
+
+💠 QQ主题  
+💬 QQ气泡  
+🔤 QQ字体  
+🖼️ QQ挂件  
+📇 QQ名片  
+
+</div>
 
 ---
 
-### 🧩 核心功能
-`github/yuguilai/yuguilai`  
-即此仓库，主要提供 QQ 主题和 QQ 气泡的预览图服务，输入参数 `itmend`（装扮的 ID）即可加载装扮封面。
+# 🌐 在线预览
 
-> 🔜 **下版本规划**（功能已实现但未发布）：  
-> - 支持真正的预览图（如 QQ 主题的三张预览图）  
-> - 封面点击进入二级页面  
-> - 展示所有预览图和名称、作者、跳转功能  
->  
-> *因作者偷懒，下个版本功能已实现但页面未完善，故未发布版本并已停更*
+<div align="center">
 
----
+## 👉 https://yuguilai.github.io/yuguilai
 
-### ⚠️ 项目状态
-**作者已于 2024 年 8 月停更（断更/淡更）**  
-若有想将此项目继续维护者，作者可提供：
-- 本项目内不包含的几个 QQ 个性装扮接口
-- 自己弄的拉坤源码
+输入装扮 ID 即可在线预览 QQ 主题与气泡
+
+</div>
 
 ---
 
-### 📜 项目声明
-> 这个项目是我们几个网络小朋友自娱自乐制作的：  
-> 🔸 **仅供学习和网络技术交流**  
-> 🔸 **不做任何盈利行为**  
->  
-> 未来可能：  
-> - 🌌 沉寂于网络  
-> - ✨ 服务于更多  
-> - ⚡ 丢失所有效果...
+# 📖 项目简介
+
+`yuguilai` 团队于 **2024 年 2 月** 启动的项目（现已停更并关闭阅读权限）。
+
+项目主要用于：
+
+- 研究 QQ 个性装扮资源结构
+- 分析 QQ 个性装扮商城资源规律
+- 体验 QQ 个性装扮中的付费及门槛装扮
+- 研究 Android QQ9 的相关实现逻辑
+
+---
+
+# 🧩 项目内容
+
+主要涵盖：
+
+| 类型 | 内容 |
+|---|---|
+| 💠 | QQ主题 |
+| 💬 | QQ气泡 |
+| 🔤 | QQ字体 |
+| 🖼️ | QQ挂件 |
+| 📇 | QQ名片 |
+
+---
+
+# ⚙️ 仓库功能
+
+当前仓库：
+
+## `github/yuguilai/yuguilai`
+
+主要提供：
+
+- QQ主题在线预览
+- QQ气泡在线预览
+- 装扮封面加载
+- 跳转 QQ 装扮详情页
+
+---
+
+# 🔍 使用方式
+
+输入参数：
+
+```text
+itmend
